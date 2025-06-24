@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Necessidade</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastro.html">Preciso de voluntários</a>
+      <a href="necessidades.html">Visualizar Necessidades</a>
+    </nav>
+  </header>
+
+    <!--
+   Botão WhatsApp
+ -->
+
+ <div class="whats">
+  <a href="https://wa.me/5543996524188?text= Olá vim através do site! Gostaria de conversar! " target="_blank">
+  <img src="whatsapplogo.PNG" alt="fale conosco pelo zap" width="60" height="60">
+</a>
+</div>
+
+  <main>
+    <section class="intro">
+      <h2>Cadastro de Necessidade</h2>
+      <p>Preencha os campos abaixo para cadastrar suas demandas por voluntários ou doações, aqui é importante preencher com antenção para que não ocorra erros .</p>
+    </section>
+
+    <form id="form" class="formulario">
+      <label>Nome da Instituição:
+        <input type="text" id="instituicao" required />
+      </label>
+
+      <label>Tipo de Ajuda:
+        <select id="tipoAjuda" required>
+          <option value="">Selecione</option>
+          <option>Educação</option>
+          <option>Saúde</option>
+          <option>Meio Ambiente</option>
+          <option>Doação de Alimentos</option>
+          <option>Doação de Roupas</option>
+          <option>Outros</option>
+        </select>
+      </label>
+
+      <label>Título da Necessidade:
+        <input type="text" id="titulo" required />
+      </label>
+
+      <label>Descrição Detalhada:
+        <textarea id="descricao" required></textarea>
+      </label>
+
+      <label>CEP:
+        <input type="text" id="cep" required />
+      </label>
+
+      <label>Rua:
+        <input type="text" id="rua" readonly />
+      </label>
+
+      <label>Número:
+        <input type="text" id="numero" required />
+      </label>
+      
+      <label>Bairro:
+        <input type="text" id="bairro" readonly />
+      </label>
+
+      <label>Cidade:
+        <input type="text" id="cidade" readonly />
+      </label>
+
+      <label>Estado:
+        <input type="text" id="estado" readonly />
+      </label>
+
+      <label>Contato:
+        <input type="text" id="contato" required />
+      </label>
+
+      <button type="submit" class="cta">Cadastrar</button>
+    </form>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Conecta SOS</p>
+    <div class="social">
+      <a href="https://www.facebook.com/SEU_PERFIL_AQUI" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="facebook.jpeg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/SEU_PERFIL_AQUI" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="instagramm.jpg" alt="Instagram" />
+      </a>
+  
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

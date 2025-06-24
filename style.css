@@ -1,0 +1,344 @@
+/* Reset e Configurações Globais */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111111;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .whats{
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    z-index: 9999;
+  }
+  
+  main {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  /* Header e Navegação */
+  header {
+    background-color: #bbda0d;
+    color: rgb(0, 0, 0);
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: rgb(0, 0, 0);
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+  }
+  
+  nav a:hover {
+    color: #141414;
+    border-bottom-color: #000000;
+  }
+  
+  /* Estilos da Página Inicial */
+  .carousel {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .intro {
+    background: #bbda0d;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    text-align: center;
+  }
+  
+  .intro h2 {
+    font-size: 2.2em;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  .banner-voluntario {
+    background: linear-gradient(to right, #bbda0d, #6fa102);
+    color: rgb(0, 0, 0);
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .banner-conteudo h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  .banner-conteudo p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+  }
+  
+  .cta-banner {
+    background-color: #000000;
+    color: #bbda0d ;
+    padding: 14px 30px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .cta-banner:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+  }
+  
+  .destaques {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .destaques h2 {
+    font-size: 2.2em;
+    color: #bbda0d;
+    margin-bottom: 30px;
+  }
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+  
+  /* Estilo de Card Geral (para a página de necessidades) */
+  .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.1);
+  }
+  
+  .card h3 {
+    color: #cff011;
+    margin-top: 0;
+  }
+  
+  /* Card Específico para Causas em Destaque */
+  .card.causa {
+    border: none;
+    border-top: 4px solid #bbda0d;
+  }
+  
+  .card.causa h3 {
+    font-size: 1.4em;
+  }
+  
+  /* Página de Cadastro (Formulário) */
+  .formulario {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formulario label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .formulario input,
+  .formulario select,
+  .formulario textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .formulario input:focus,
+  .formulario select:focus,
+  .formulario textarea:focus {
+    outline: none;
+    border-color: #bbda0d;
+    box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.2);
+  }
+  
+  .formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .formulario button {
+    align-self: flex-start;
+    background-color: #bbda0d;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario button:hover {
+    background-color: #bbda0d;
+  }
+  
+  /* Página de Necessidades (Filtros) */
+  .filtros {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+    flex-wrap: wrap;
+  }
+  
+  #pesquisa, #filtro {
+    padding: 12px;
+    font-size: 1em;
+    width: 280px;
+    max-width: 90%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: auto;
+  }
+  
+  footer .social {
+    margin-top: 10px;
+  }
+  
+  footer .social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  footer .social a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+  }
+  
+  footer .social img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; /* Mantém a imagem redonda caso ela não seja */
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+    }
+    nav a {
+      margin: 0 8px;
+    }
+    .carousel {
+      height: 300px;
+    }
+    .intro, .formulario {
+      padding: 20px;
+    }
+    .banner-conteudo h2 {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .cards {
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
+      width: 90%;
+      max-width: 320px;
+    }
+  }

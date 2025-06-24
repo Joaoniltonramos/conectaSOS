@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualizar Necessidades</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="cadastro.html">Preciso de voluntários</a>
+      <a href="necessidades.html">Visualizar Necessidades</a>
+     
+    </nav>
+  </header>
+
+    <!--
+   Botão WhatsApp
+ -->
+
+ <div class="whats">
+  <a href="https://wa.me/5543996524188?text= Olá vim através do site! Gostaria de conversar! " target="_blank">
+  <img src="whatsapplogo.PNG" alt="fale conosco pelo zap" width="60" height="60">
+</a>
+</div>
+
+  <main>
+    <section class="intro">
+      <h2>Necessidades Cadastradas</h2>
+      <p>Utilize o nosso filtro e encontre a causa pela qual vopçê mais se identifica e queira ajudar ou ser voluntário.</p>
+    </section>
+
+    <div class="filtros">
+      <input type="text" id="pesquisa" placeholder="Buscar por título ou descrição" />
+      <select id="filtro">
+        <option value="">Filtrar por Tipo</option>
+        <option>Educação</option>
+        <option>Saúde</option>
+        <option>Meio Ambiente</option>
+        <option>Doação de Alimentos</option>
+        <option>Doação de Roupas</option>
+        <option>Outros</option>
+      </select>
+    </div>
+
+    <div id="lista" class="cards"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Conecta SOS</p>
+    <div class="social">
+      <a href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="facebook.jpeg" alt="Facebook" />
+      </a>
+      <a href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="instagramm.jpg" alt="Instagram" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
